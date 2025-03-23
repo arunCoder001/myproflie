@@ -9,3 +9,19 @@ repper.addEventListener('scroll', (e) => {
         navbar.classList.remove('navbar-scroll');
     }
 })
+
+
+
+
+let navLinks = document.querySelector('.nav-links');
+let menuBtn = document.querySelector('.menu-btn');
+
+
+menuBtn.addEventListener('click', () => {
+    let nav = navLinks.classList.toggle('nav-links-width');
+    if(nav) {
+        menuBtn.innerHTML = '<i class="bx bx-x"></i>';
+    }else {
+        menuBtn.innerHTML = '<i class="bx bx-menu"></i>';
+    }
+})

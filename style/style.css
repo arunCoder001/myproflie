@@ -32,7 +32,9 @@ body{
 section{
     width: 100vw;
     height: 100%;
+    top: 100px;
     background: transparent;
+    z-index: 2;
 }
 nav{
     display: flex;
@@ -101,6 +103,7 @@ nav{
 
 .nav-links ul li a:hover{
     color: white;
+    text-shadow: 0 0 15px white;
 
 }
 
@@ -232,10 +235,6 @@ nav button{
 
 
 
-.dashboard {
-  padding: 40px;
-  text-align: center;
-}
 
 .dashboard h1 {
   font-size: 40px;
@@ -479,6 +478,9 @@ footer {
 @media (max-width: 768px) {
   /* nav bar is start */
 
+  section{
+    display: grid;
+  }
   nav{
     display: flex;
     justify-content: space-between;
@@ -516,14 +518,148 @@ footer {
     box-shadow: none;
   }
   nav button i{
-    background: black;
     color: white;
     box-shadow: none;
   }
 
+  nav button i:hover{
+    color: white;
+    text-shadow: 0 0  15px white;
+  }
+
+
+  
   .nav-links{
-    display: none;
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 0px;
+    background: #000; /* Transparent white */
+    backdrop-filter: blur(10px);
+    top: 6rem;
+    margin: auto;
+    z-index: 3;
+    border-radius: 12px;
+    overflow: hidden;
     
   }
+  .nav-links-width{
+    height: 300px;
+  }
+  .nav-links ul{
+    display: grid;
+    flex-direction: column;
+    gap: 2rem;
+    list-style: none;
+    margin: auto;
+    padding: 20px;
+    align-items: center;
+    height: 300px;
+  }
+
+  .nav-links ul li{
+    color: white;
+    width: 80%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    margin: auto;
+  }
+
+  .nav-links ul li a{
+    color: wheat;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: 0.5px solid aquamarine;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-links ul li a:hover{
+    color: white;
+    text-shadow: 0 0 15px white;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 100%);
+    letter-spacing: 1rem;
+  }
  /* nav bar is end */
+
+
+ /* about is start */
+  #about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    top: 12rem;
+    position: relative;
+    height: auto;
+    margin: 23px auto;
+  }
+
+  #about .dashboard{
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    
+  }
+
+  #about .dashboard h1{
+    font-size: 1.3rem;
+    position: relative;
+    background: rgba(40, 29, 38, 0.367);
+    top: 23px;
+  }
+
+
+  #about .dashboard .profile-card{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    margin: auto;
+    border-radius: 8px;
+  }
+
+  #project{
+      height: auto;
+      width: 80%;
+      position: relative;
+      margin: 13rem auto;
+      display: flex;
+      
+  }
+
+  #project .dashboard{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  #contact{
+    height: auto;
+    margin: 13rem auto;
+  }
+  #contact .dashboard{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+
+  footer{
+    height: auto;
+   
+  }
+  footer p{
+    font-size: 1rem;
+  }
+ /* end of start */
 }
