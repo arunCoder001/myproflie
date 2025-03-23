@@ -1,0 +1,529 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.3s ease-in-out;
+    scroll-behavior: smooth;
+
+}
+
+
+a{
+  text-decoration: none;
+  text-shadow: 0 0 15px #0a0a0a;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+} 
+
+.repper{
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  overflow-x: hidden;
+  background-image: url('../asset/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+section{
+    width: 100vw;
+    height: 100%;
+    background: transparent;
+}
+nav{
+    display: flex;
+    top: 12px;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 10vh;
+    background: rgba(255, 255, 255, 0.2); /* Transparent white */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+    border-radius: 12px;
+    border: 1px solid black;
+    position: relative;
+    z-index: 3;
+    left:5% ;
+}
+
+/* this is active  */
+
+.navbar-scroll{
+  position: fixed;
+}
+/* end of active */
+.logo{
+    margin: 23px;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.logo h5{
+    font-size: 1.2rem;
+    word-wrap: nowrap;
+    white-space: nowrap;
+    text-shadow: 0 0 15px #d4cdcd;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.nav-links{
+    margin: 23px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    color: white;
+}
+
+.nav-links ul{
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links ul li a{
+    text-decoration: none;
+    color:black;
+    font-size: 1.2rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.nav-links ul li a:hover{
+    color: white;
+
+}
+
+nav button{
+  display: none;
+}
+/* end of nav bar */
+/* playerBoard */
+
+.playerBoard{
+    width: 95%;
+    height: 80vh;
+    
+    margin: auto;
+    bottom: -5%;
+    position: relative;
+   border-radius: 8px;
+}
+
+
+.playerBoard .palyerboardNav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    height: 80px;
+    margin: auto; 
+    background: rgba(255, 255, 255, 0.2); /* Transparent white */
+    backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+    border-radius: 8px;
+    border: 3px solid aqua;
+}
+
+.playerBoard .palyerboardNav h1{
+    margin: 23px;
+    color: blueviolet;
+    text-shadow: 0 0  12px blueviolet;
+}
+.dot{
+   color: rgb(17, 183, 224);
+   font-size: 1.5rem;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    padding: 30px;
+  }
+
+  .sidebar {
+    background-color: #222;
+    padding: 20px;
+    border: 2px solid #00ff99;
+    border-radius: 10px;
+  }
+
+  .sidebar h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #00ff99;
+    padding-bottom: 10px;
+  }
+
+  .sidebar ul {
+    list-style: none;
+  }
+
+  .sidebar ul li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #00ff99;
+    color: #00ff99;
+    text-shadow: 0 0 15px #00ff99;
+    cursor: pointer;
+    transition : 0.3s ease-in-out;
+  }
+
+  .sidebar ul li:hover {
+    background-color: #333;
+  }
+
+  .main-content {
+    background-color: #222;
+    padding: 20px;
+    border: 2px solid #00ff99;
+    border-radius: 10px;
+  }
+
+  .main-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #00ff99;
+    padding-bottom: 10px;
+  }
+
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .skill {
+    background-color: #333;
+    padding: 15px 20px;
+    border: 2px solid #00ff99;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    cursor: pointer;
+    color: #00ff99;
+    text-shadow: 0 0 15px #00ff99;
+  }
+
+  .skill:hover {
+    transform: scale(1.1);
+    background-color: #444;
+  }
+/* End of playerBoard */
+
+
+
+/* this is dashbrod and about */
+
+
+
+
+
+
+
+.dashboard {
+  padding: 40px;
+  text-align: center;
+}
+
+.dashboard h1 {
+  font-size: 40px;
+  color: #00ffea;
+  text-shadow: 0 0 15px #00ffea;
+  margin-bottom: 40px;
+}
+
+.profile-card {
+  background: #1a1a1a;
+  border: 2px solid #00ffea;
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 0 30px #00ffea66;
+}
+
+.profile-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #00ffea;
+  margin-bottom: 20px;
+}
+
+.profile-card h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.role {
+  color: #ff00ff;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.stat h3 {
+  color: #00ffea;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.stat p {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.about {
+  color: #ccc;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+button {
+  background: #00ffea;
+  color: #000;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #00ffea;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #00d4c2;
+  box-shadow: 0 0 25px #00ffea;
+}
+
+/* end of dahsboard and about */
+
+
+/* project dashboard */
+
+
+
+
+.dashboard {
+  padding: 40px;
+  text-align: center;
+}
+
+.dashboard h1 {
+  font-size: 42px;
+  margin-bottom: 50px;
+  color: #00ffea;
+  text-shadow: 0 0 15px #00ffea;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background-color: #1a1a1a;
+  border: 2px solid #00ffea;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #00ffea66;
+  transition: 0.3s;
+}
+
+.project-card h2 {
+  color: #ff00ff;
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.project-card p {
+  color: #cccccc;
+  font-size: 15px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.project-card button {
+  background-color: #00ffea;
+  color: #000;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 0 15px #00ffea;
+  transition: 0.3s;
+}
+
+.project-card button:hover {
+  background-color: #00d4c2;
+  box-shadow: 0 0 25px #00ffea;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 40px #00ffea99;
+}
+
+
+/* end of project dashboard */
+
+
+
+/* social icons */
+#contact{
+  display: flex;
+  height: 400px;
+  width: 90%;
+  margin: auto;
+}
+
+
+#contact .dashboard{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 30px;
+}
+
+.social-icons a {
+  background: #1a1a1a;
+  color: #00ffea;
+  padding: 15px 25px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  border: 2px solid #00ffea;
+  box-shadow: 0 0 15px #00ffea66;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: #00ffea;
+  color: #0f0f0f;
+  box-shadow: 0 0 30px #00ffea;
+  transform: scale(1.1);
+}
+
+.socialIcon {
+  font-size: 30px;
+  text-shadow: 0 0 15px #00ffea66;
+}
+
+/* Different brand colors (optional) */
+.insta:hover { background: #e1306c; color: #fff; }
+.whatsapp:hover { background: #25D366; color: #fff; }
+.github:hover { background: #333; color: #fff; }
+.linkedin:hover { background: #0077b5; color: #fff; }
+.snapchat:hover { background: #FFFC00; color: #000; }
+.twitter:hover { background: #1DA1F2; color: #fff; }
+.facebook:hover { background: #1877F2; color: #fff; }
+.youtube:hover { background: #FF0000; color: #fff; }
+
+/* Custom colors */
+
+/* end of social icons */
+
+
+
+/* fotter  */
+
+
+footer {
+  background: #1a1a1a;
+  color: #00ffea;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Orbitron', sans-serif;
+  box-shadow: 0 0 30px #00ffea66;
+  text-shadow: 0 0 15px #00ffea66;
+}
+
+
+
+/* fotter end */
+/* Responsive Design */
+
+
+@media (max-width: 768px) {
+  /* nav bar is start */
+
+  nav{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav .logo{
+    width: 50%;
+    display: flex;
+    justify-content: left;
+  
+  }
+
+  nav .logo h5{
+    font-size: 1rem;
+  }
+
+  nav button{
+    width: 30px;
+    display: block;
+    margin: 13px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+   border-radius: 12px;
+    border: none;
+    box-shadow: none;
+    
+    
+  }
+
+  nav button:hover{
+    background: transparent;
+    box-shadow: none;
+  }
+  nav button i{
+    background: black;
+    color: white;
+    box-shadow: none;
+  }
+
+  .nav-links{
+    display: none;
+    
+  }
+ /* nav bar is end */
+}
